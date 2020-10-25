@@ -17,7 +17,7 @@ const scale = [
       {score: 15 , desc:"The patient must be able to wear braces if required, lock and unlock these braces assume standing position, sit down, and place the necessary aids into position for use. The patient must be able to crutches, canes, or a walkarette, and walk 50 metres without help or supervision."},
     ]
   },
-  {category:"AMBULATION/WHEELCHAIR",
+  {category:"AMBULATION WHEELCHAIR",
     rankings:[
       {score: 1 , desc:"Dependent in wheelchair ambulation."},
       {score: 2 , desc:"Patient can propel self short distances on flat surface, but assistance is required for other steps of wheelchair management."},
