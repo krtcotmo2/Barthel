@@ -47,9 +47,13 @@
       for(let s of scale[curCategory].rankings){
         console.log(s['desc']);
         let divTag = document.createElement('div');
-        let pTag = document.createElement('p');
-        $(pTag).html(s['desc']);
-        $(divTag).addClass('oneOption')
+        let pointBtn = document.createElement('div');
+        let pTag = document.createElement('span');
+        $(pTag).html(s['desc']);        
+        $(pointBtn).html(s['score']);
+        $(pointBtn).addClass('pointBtn');
+        $(divTag).addClass('oneOption');
+        $(divTag).append(pointBtn);
         $(divTag).append(pTag);
         $('.opitons').append(divTag)
       }
