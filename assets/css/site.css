@@ -1,0 +1,39 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: stretch;
+  max-width:550px;
+  margin:0 auto;
+}
+
+nav{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between; 
+}
+nav img{
+  padding: 20px !important;
+  border:1px solid #ccc;
+  width:60px;
+  cursor:pointer;
+}
+nav span{
+  border-bottom:1px solid #ccc; 
+  border-top:1px solid #ccc;
+  flex-grow: 1;
+  text-align: center;
+  font-size:32px;
+  font-weight:bold;
+  line-height:48px
+}
+.opitons{
+  overflow:auto;
+  overflow-x: hidden;
+}
+.oneOption{
+  padding:12px;
+  font-size:16px;
+}

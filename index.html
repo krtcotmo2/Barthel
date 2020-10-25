@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src='./assets/js/barthel.js'></script>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/site.css">
+</head>
+<body>
+
+  <nav>
+    <img src="./assets/images/chevron-left.svg" class='nav prev'>
+    <span id="curCat">Category</span>
+    <img src="./assets/images/chevron-right.svg" class='nav next'>
+  </nav>
+  <div class='opitons'>
+    <p>asfsfsf</p>
+  </div>
+
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script type='text/javascript'> 
+    $(document).ready(function(){
+      setFields();
+    })
+
+    $('.prev').click(function(){
+      if(curCategory === 0) return;
+      curCategory--;
+      setFields()
+    })
+
+    $('.next').click(function(){
+      if(curCategory === scale.length-1) return;
+      curCategory++;
+      setFields()
+    })
+
+    function setFields(){
+      $("#curCat").html(scale[curCategory].category);  
+      $('.opitons').html(''); 
+      for(let s of scale[curCategory].rankings){
+        console.log(s['desc']);
+        let divTag = document.createElement('div');
+        let pTag = document.createElement('p');
+        $(pTag).html(s['desc']);
+        $(divTag).addClass('oneOption')
+        $(divTag).append(pTag);
+        $('.opitons').append(divTag)
+      }
+    }
+  </script> 
+</body>
+</html>
