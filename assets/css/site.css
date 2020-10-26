@@ -29,6 +29,9 @@ nav span{
   font-weight:bold;
   line-height:48px
 }
+nav img:hover{
+  background-color: #ccc;
+}
 .opitons{
   overflow:auto;
   overflow-x: hidden;
