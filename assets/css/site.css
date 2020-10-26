@@ -32,9 +32,13 @@ nav span{
 nav img:hover{
   background-color: #ccc;
 }
+
 .opitons{
   overflow:auto;
   overflow-x: hidden;
+}
+.chosen{
+  background:#ccc;
 }
 .oneOption{
   display: flex;

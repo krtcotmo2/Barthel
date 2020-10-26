@@ -48,14 +48,30 @@
         let divTag = document.createElement('div');
         let pointBtn = document.createElement('div');
         let pTag = document.createElement('span');
+        if(s['score'] === scale[curCategory]['scored']){
+          $(divTag).addClass("chosen");
+        }
         $(pTag).html(s['desc']);        
         $(pointBtn).html(s['score']);
         $(pointBtn).addClass('pointBtn');
         $(divTag).addClass('oneOption');
         $(divTag).append(pointBtn);
         $(divTag).append(pTag);
-        $('.opitons').append(divTag)
+        $('.opitons').append(divTag);
+        $(pTag).click(function(){
+          setScores(curCategory, s['score'])
+        })
       }
+    }
+
+    function setScores(cat, score){
+      scale[cat].scored = score;
+      scale.curscore = scale.reduce( (a, b) => a + b.scored, 0);
+      console.log(scale.curscore)
+      if(cat === scale.length-1) return;
+      curCategory++;
+      setFields();
+
     }
   </script> 
 </body>

@@ -1,5 +1,7 @@
 const scale = [
   { category:"CHAIR/BED TRANSFERS",
+    id:0,
+    scored:null,
     rankings:[
       {score: 0 , desc:"Unable to participate in a transfer. Two attendants are required to transfer the patient with or without a mechanical device."},
       {score: 3 , desc:"Able to participate but maximum assistance of one other person is require in all aspects of the transfer."},
@@ -9,6 +11,8 @@ const scale = [
     ]
   },
   {category:"AMBULATION",
+    id:1,    
+    scored:null,
     rankings:[
       {score: 0 , desc:"Dependent in ambulation."},
       {score: 3 , desc:"Constant presence of one or more assistant is required during ambulation."},
@@ -18,6 +22,8 @@ const scale = [
     ]
   },
   {category:"AMBULATION WHEELCHAIR",
+    id:2,
+    scored:null,
     rankings:[
       {score: 1 , desc:"Dependent in wheelchair ambulation."},
       {score: 2 , desc:"Patient can propel self short distances on flat surface, but assistance is required for other steps of wheelchair management."},
@@ -27,6 +33,8 @@ const scale = [
     ]
   },
   {category:"STAIR CLIMBING",
+    id:3,
+    scored:null,
     rankings:[
       {score: 0 , desc:"The patient is unable to climb stairs."},
       {score: 2 , desc:"Assistance is required in all aspects of chair climbing, including assistance with walking aids."},
@@ -35,6 +43,8 @@ const scale = [
       {score: 10 , desc:"The patient is able to go up and down a flight of stairs safely without help or supervision. The patient is able to use hand rails, cane or crutches when needed and is able to carry these devices as he/she ascends or descends."},
   ]},
   {category:"TOILET TRANSFERS",
+    id:4,
+    scored:null,
     rankings:[
       {score: 0 , desc:"Fully dependent in toileting."},
       {score: 2 , desc:"Assistance required in all aspects of toileting."},
@@ -43,6 +53,8 @@ const scale = [
       {score: 10 , desc:"The patient is able to get on/off the toilet, fasten clothing and use toilet paper without help. If necessary, the patient may use a bed pan or commode or urinal at night, but must be able to empty it and clean it."},
   ]},
   {category:"BOWEL CONTROL",
+    id:5,
+    scored:null,
     rankings:[
       {score: 0 , desc:"The patient is bowel incontinent."},
       {score: 2 , desc:"The patient needs help to assume appropriate position, and with bowel movement facilitatory techniques."},
@@ -51,6 +63,8 @@ const scale = [
       {score: 10 , desc:"The patient can control bowels and has no accidents, can use suppository, or take an enema when necessary."},
   ]},
   {category:"BLADDER CONTROL",
+    id:6,
+    scored:null,
     rankings:[
       {score: 0 , desc:"The patient is dependent in bladder management, is incontinent, or has indwelling catheter."},
       {score: 2 , desc:"The patient is incontinent but is able to assist with the application of an internal or external device."},
@@ -59,6 +73,8 @@ const scale = [
       {score: 10 , desc:"The patient is able to control bladder day and night, and/or is independent with internal or external devices."},
   ]},
   {category:"BATHING",
+    id:7,
+    scored:null,
     rankings:[
       {score: 0 , desc:"Total dependence in bathing self."},
       {score: 1 , desc:"Assistance is required in all aspects of bathing, but patient is able to make some contribution."},
@@ -67,6 +83,8 @@ const scale = [
       {score: 5, desc:"The patient may use a bathtub, a shower, or take a complete sponge bath. The patient must be able to do all the steps of whichever method is employed without another person being present"},
   ]},
   {category:"DRESSING",
+    id:8,
+    scored:null,
     rankings:[
       {score: 0 , desc:"The patient is dependent in all aspects of dressing and is unable to participate in the activity."},
       {score: 2 , desc:"The patient is able to participate to some degree, but is dependent in all aspects of dressing."},
@@ -75,6 +93,8 @@ const scale = [
       {score: 10 , desc:"The patient is able to put on, remove, corset, braces, as prescribed."},
   ]},
   {category:"PERSONAL HYGIENE",
+    id:9,
+    scored:null,
     rankings:[
       {score: 0 , desc:"The patient is unable to attend to personal hygiene and is dependent in all aspects."},
       {score: 1 , desc:"Assistance is required in all steps of personal hygiene, but patient able to make some contribution."},
@@ -83,6 +103,8 @@ const scale = [
       {score: 5, desc:"The patient can wash his/her hands and face, comb hair, clean teeth and shave. A male patient may use any kind of razor but must insert the blade, or plug in the razor without help, as well as retrieve it from the drawer or cabinet. A female patient must apply her own make-up, if used, but need not braid or style her hair"},
   ]},
   {category:"FEEDING",
+    id:10,
+    scored:null,
     rankings:[
       {score: 0 , desc:"Dependent in all aspects and needs to be fed, nasogastric needs to be administered."},
       {score: 2 , desc:"Can manipulate an eating device, usually a spoon, but someone must provide active assistance during the meal."},
