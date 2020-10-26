@@ -71,7 +71,8 @@
         $(divTag).append(pTag);
         $('.opitons').append(divTag);
         $(divTag).click(function(event){
-          $(this).addClass('chosen')
+          $('.oneOption').removeClass('chosen');
+          $(this).addClass('chosen');
           setScores(curCategory, s['score'])
         })
       }
@@ -86,7 +87,7 @@
         $("#interTag").html("<strong>INTERPRETATION</strong>: " + interVal['value']);
         predVal = pred.find( arg => arg.high >= scale.curscore && arg.low <= scale.curscore)
         $("#predTag").html("<strong>PREDICTION</strong>: " + predVal['value']);
-        $("#dialog").dialog();
+        $("#dialog").dialog("open");
         return;
       } 
       curCategory++;
