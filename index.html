@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./assets/css/site.css">
 </head>
 <body>
-  <div id="dialog" title="Patient Score" width="400" style='max-width:400px; display:none'>
+  <div id="dialog" title="Patient Score" width="350" style='max-width:350px; display:none'>
     <div data-role="body">
         <p id='scoreTag' style="text-align: center; font-size:32px; font-weight: bold;"></p>
         <p id='interTag' style="text-align: left; font-size:18px;"></p>
@@ -82,14 +82,10 @@
       scale.curscore = scale.reduce( (a, b) => a + b.scored, 0);
       if(cat === scale.length-1){
         $("#scoreTag").html(scale.curscore);
-        console.log(scale.curscore)
         interVal = inter.find( arg => arg.high >= scale.curscore && arg.low <= scale.curscore);
-        
         $("#interTag").html("<strong>INTERPRETATION</strong>: " + interVal['value']);
-
         predVal = pred.find( arg => arg.high >= scale.curscore && arg.low <= scale.curscore)
         $("#predTag").html("<strong>PREDICTION</strong>: " + predVal['value']);
-
         $("#dialog").dialog();
         return;
       } 
