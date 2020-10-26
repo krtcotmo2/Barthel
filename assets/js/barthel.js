@@ -114,6 +114,23 @@ const scale = [
   ]},
 ];
 
+const inter = [
+  {high:20, low:0, value:'Total Dependence'},
+  {high:60, low:21, value:'Severe Dependence'},
+  {high:90, low:61, value:'Moderate Dependence'},
+  {high:99, low:91, value:'Slight Dependence'},
+  {high:400, low:100, value:'Independence'},
+]
+
+const pred = [
+  {high:40, low:0, value:`Unlikely to go home<br/>
+  - Dependent in Mobility<br/>
+  - Dependent in Self Care`},
+  {high:60, low:41, value:'Pivotal score where patients move from dependency to assisted independence.'},
+  {high:85, low:61, value:'If living alone will probably need a number of community services to cope.'},
+  {high:400, low:86, value:`Likely to be discharged to community living<br/>
+  - Independent in transfers and able to walk or use wheelchair independently.`},
+]
 const evlaulation = 'kdkjd';
 let curCategory = 0;
 let curScore = 0;
